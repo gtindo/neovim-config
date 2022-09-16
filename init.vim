@@ -47,8 +47,14 @@ call plug#begin("~/.vim/plugged")
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
         Plug 'pantharshit00/vim-prisma'
         Plug 'w0rp/ale'
+        Plug 'pangloss/vim-javascript'
+        Plug 'leafgarland/typescript-vim'
+        Plug 'maxmellon/vim-jsx-pretty'
 call plug#end()
 
+
+" NERDTree 
+let NERDTreeShowHidden=1
 
 
 " Open new split panes to right and below
@@ -66,15 +72,23 @@ autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd VimEnter * NERDTree
 
 
+" CoC Params
+let g:coc_global_extensions = ['coc-tsserver']
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 
 " Color scheme
-colorscheme dracula
+colorscheme github_dark
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#left_sep = '|'
 let g:airline_powerline_fonts = 1
+
 
 
 " Auto close
@@ -94,3 +108,7 @@ let g:ale_fixers = {
  
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
+
+"Vim Session
+"autocmd! VimLeave * mksession
+"autocmd! VimEnter * source ~/Session.vim 
