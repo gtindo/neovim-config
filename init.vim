@@ -50,6 +50,8 @@ call plug#begin("~/.vim/plugged")
         Plug 'pangloss/vim-javascript'
         Plug 'leafgarland/typescript-vim'
         Plug 'maxmellon/vim-jsx-pretty'
+        Plug 'folke/tokyonight.nvim', {'branch': 'main'}
+        Plug 'rakr/vim-one'
 call plug#end()
 
 
@@ -81,7 +83,9 @@ nmap <silent> gr <Plug>(coc-references)
 
 
 " Color scheme
-colorscheme github_dark
+"set background=dark
+"let g:one_allow_italics = 1
+colorscheme dracula
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
