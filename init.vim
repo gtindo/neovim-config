@@ -53,6 +53,9 @@ call plug#begin("~/.vim/plugged")
         Plug 'folke/tokyonight.nvim', {'branch': 'main'}
         Plug 'rakr/vim-one'
         Plug 'voldikss/vim-floaterm'
+        Plug 'joshdick/onedark.vim'
+        Plug 'sainnhe/edge'
+        Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 
@@ -86,7 +89,16 @@ nmap <silent> gr <Plug>(coc-references)
 " Color scheme
 "set background=dark
 "let g:one_allow_italics = 1
-colorscheme dracula
+"
+if has('termguicolors')
+    set termguicolors
+endif
+
+let g:edge_style = "aura"
+let g:edge_better_performance = 1
+let g:airline_theme = 'edge'
+
+colorscheme edge
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
