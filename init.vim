@@ -52,6 +52,7 @@ call plug#begin("~/.vim/plugged")
         Plug 'maxmellon/vim-jsx-pretty'
         Plug 'folke/tokyonight.nvim', {'branch': 'main'}
         Plug 'rakr/vim-one'
+        Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 
@@ -116,3 +117,10 @@ let g:ale_sign_warning = '⚠️'
 "Vim Session
 "autocmd! VimLeave * mksession
 "autocmd! VimEnter * source ~/Session.vim 
+"
+"
+
+"Mappings
+cmap nt NERDTree
+
+cmap ftn FloatermNew
