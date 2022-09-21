@@ -126,6 +126,10 @@ let g:ale_fixers = {
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
 
+"Prettier
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+
 "Vim Session
 "autocmd! VimLeave * mksession
 "autocmd! VimEnter * source ~/Session.vim 
@@ -136,3 +140,6 @@ let g:ale_sign_warning = '⚠️'
 cmap nt NERDTree
 
 cmap ftn FloatermNew
+cmap ftt FloatermToggle
+cmap ft1 FloatermFirst
+cmap ft2 FloatermLast
