@@ -48,7 +48,7 @@ call plug#begin("~/.vim/plugged")
         Plug 'pantharshit00/vim-prisma'
         Plug 'w0rp/ale'
         Plug 'pangloss/vim-javascript'
-        Plug 'leafgarland/typescript-vim'
+        "Plug 'leafgarland/typescript-vim'
         Plug 'maxmellon/vim-jsx-pretty'
         Plug 'folke/tokyonight.nvim', {'branch': 'main'}
         Plug 'rakr/vim-one'
@@ -56,6 +56,9 @@ call plug#begin("~/.vim/plugged")
         Plug 'joshdick/onedark.vim'
         Plug 'sainnhe/edge'
         Plug 'sheerun/vim-polyglot'
+        Plug 'morhetz/gruvbox'
+        Plug 'HerringtonDarkholme/yats.vim'
+        Plug 'Yggdroot/indentLine'
 call plug#end()
 
 
@@ -94,17 +97,18 @@ if has('termguicolors')
     set termguicolors
 endif
 
-let g:edge_style = "aura"
-let g:edge_better_performance = 1
-let g:airline_theme = 'edge'
+"let g:edge_style = 'aura'
+"let g:edge_better_performance = 1
+"let g:airline_theme = 'edge'
 
-colorscheme edge
+colorscheme gruvbox
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#left_sep = '|'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
 
 
 
@@ -135,6 +139,9 @@ let g:prettier#autoformat_require_pragma = 0
 "autocmd! VimEnter * source ~/Session.vim 
 "
 "
+
+" Indent Line
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 "Mappings
 cmap nt NERDTree
