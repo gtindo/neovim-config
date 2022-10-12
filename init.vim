@@ -13,7 +13,6 @@ set autoindent
 set number
 set wildmode=longest,list
 
-syntax on
 set mouse=a
 set clipboard=unnamedplus
 set cursorline
@@ -88,8 +87,10 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-
 " Color scheme
+
+syntax on
+
 "set background=dark
 "let g:one_allow_italics = 1
 "
@@ -101,7 +102,8 @@ endif
 "let g:edge_better_performance = 1
 "let g:airline_theme = 'edge'
 
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme onedark
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
