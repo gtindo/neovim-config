@@ -41,7 +41,7 @@ call plug#begin("~/.vim/plugged")
         " post install (yarn install | npm install) then load plugin only for editing supported files
         Plug 'prettier/vim-prettier', {
              \ 'do': 'yarn install --frozen-lockfile --production',
-             \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+             \ 'for': ['javascript', 'typescript', 'typescriptreact','css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
         Plug 'ryanoasis/vim-devicons'
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
         Plug 'pantharshit00/vim-prisma'
